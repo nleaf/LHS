@@ -1,0 +1,71 @@
+/* Header */
+.header {
+	background: #fff;
+	border-bottom: 1px solid #e5e5e5;
+
+	&.sticky {
+	    position: fixed;
+    	width: 100%;
+    	margin: 0;
+    	height: 66px;
+    	z-index: 9999;
+    	background-color: #FFF;
+	}
+
+	.logo {
+        background-image: url(../images/lhs-logo_mobile.png);
+        background-repeat: no-repeat;
+        height: 41px;
+        width: 52px;
+        margin-left: 15px;
+        margin-right: 15px;
+        display: inline-block;
+        float: left;
+        z-index:20;
+        position: relative;
+    }
+    .logoText {
+        background-image: url(../images/lhs-logo_mobile-text.png);
+        background-repeat: no-repeat;
+        height: 43px;
+        width: 99px;
+        margin-left: 55px;
+        display: inline-block;
+        text-indent: -999999px;
+        z-index:20;
+        position: relative;
+    }
+}
+
+/* Small devices (tablets, 768px and up) Nick */
+@media (min-width: $screen-sm-min) { 
+	.header {
+		overflow: hidden;
+		
+	    .logoText {
+	        margin-left: 0px;
+	    }
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {  
+	.header {
+		overflow: hidden;
+		
+	    .logoText {
+	        margin-left: 0px;
+	    }
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {  
+	.header {
+		overflow: hidden;
+
+	    .logoText {
+	        margin-left: 0px;
+	    }
+	}
+}

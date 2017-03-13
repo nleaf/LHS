@@ -1,0 +1,26 @@
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Brand Colors 
+$primary-white: #FFFFFF;
+$primary-dblue: #00457c;
+$primary-lblue: #1daeec;
+$primary-red: #da2523;
+$primary-purple: #9567d7;
+$primary-green: #a6ce3a;
+$primary-gray: #8a8a8a;
+$primary-lgray: #a1a1a1;
+$primary-black: #000000;
+
+@font-face {
+	font-family: 'Permanent Marker';
+	src: url('PermanentMarker.eot');
+	src: url('PermanentMarker.eot?#iefix') format('embedded-opentype'),
+		url('PermanentMarker.woff') format('woff'),
+		url('PermanentMarker.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+$primary-font : 'Permanent Marker';
+

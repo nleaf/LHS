@@ -1,0 +1,157 @@
+.slide {
+	height: 75vh;
+	.carousel-inner {
+ 		position:relative;
+ 		height: 100%;
+ 		.item {
+	 		position:relative;
+	 		height: 100% !important;
+	 		.carousel-caption {
+	 			position: absolute;
+	 			bottom: 7em;
+	 			h2 {
+					margin-left: 0.3em;
+					text-align: left;
+					a {
+						color: $primary-white;
+						.text {
+							display: inline-block;
+							background: $primary-lblue;
+							font-family: $primary-font;
+							font-size: 1em;
+							padding: 3px 10px 3px 5px;
+							transform: translateY(0px) translateX(0vw) rotate(-2deg);
+						}
+					}
+				}
+				.summary {
+					a {
+						display:block;
+						color: $primary-white;
+						text-align: left;
+						font-size: 1em;
+						margin-top: 5px;
+						margin-left: 0.3em;
+						line-height: 1.4em;
+						width: 80%;
+						font-weight: 600;
+						transform: translateY(0px) translateX(0vw) rotate(-2deg);
+					}
+				}
+ 			}
+	 	}
+ 	}
+}
+.slider {
+	background-image: url(../images/slider_ph.png);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+ 	>div {
+ 		position:relative;
+ 		height: 100%;
+ 		.des {
+ 			position: absolute;
+ 			bottom: 7em;
+			h2 {
+				margin-left: 0.3em;
+				a {
+					color: $primary-white;
+					.text {
+						display: inline-block;
+						background: $primary-lblue;
+						font-family: $primary-font;
+						font-size: 1em;
+						padding: 3px 10px 3px 5px;
+						transform: translateY(0px) translateX(0vw) rotate(-2deg);
+					}
+					.summary {
+						a {
+							display:block;
+							font-size: 0.6em;
+							margin-top: 5px;
+							line-height: 1.4em;
+							width: 80%;
+							font-weight: 600;
+							transform: translateY(0px) translateX(0vw) rotate(-2deg);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bar {
+		background: $primary-white;
+		height: 10vh;
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		transform: translateY(20px) translateX(0vw) rotate(5deg);
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) { 
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+.slider {
+ 	>div {
+ 		.des {
+ 			bottom: 10em;
+ 			left: 10em;
+ 			width: 75%;
+			h2 {
+				a {
+					.text {
+						display: inline-block;
+						font-size: 1.4em;
+					}
+					.summary {
+						display:block;
+						font-size: 0.8em;
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {  
+.slide {
+ 	.carousel-inner {
+ 		.item {
+	 		.carousel-caption {
+	 			bottom: 10em;
+	 			left: 10em;
+	 			width: 75%;
+				h2 {
+					a {
+						.text {
+							display: inline-block;
+							font-size: 2.1em;
+						}
+					}
+				}
+				.summary {
+					a {
+						display:block;
+						font-size: 2.3em;
+						width: 50%;
+						&:hover {
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+}
