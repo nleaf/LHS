@@ -54,6 +54,7 @@
 	    	width: 293px;
 		}
 		ul{
+			
 			li {
 				a {
 					display: block;
@@ -73,6 +74,9 @@
 						border: 2px solid $primary-green;
 						color: $primary-green;
 					}
+				}
+				&.page_item_has_children .children {
+					display: none;
 				}
 			}
 		}

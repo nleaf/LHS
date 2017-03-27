@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="../../../Adopt_Angular/css/list.css">
+
+<div style="display:none;"><view-title>Search</view-title></div>
+<nav class="navbar navbar-default" role="navigation">
+    <form class="form-inline clearfix" role="form">
+
+        <div class="form-horizontal">
+          <div class="col-md-2">
+          <label class="control-label" for="type">Type</label>
+          <select id="type" class="form-control formCtrl" ng-model="selectedaType" ng-options="aType as aType.name for aType in aTypes"></select>
+          </div>
+          <div class="col-md-2">
+          <label class="control-label" for="gender">Gender</label>
+          <select id="gender" class="form-control formCtrl" ng-model="selectedaGender" ng-options="aGender as aGender.name for aGender in aGenders"></select>
+          </div>
+          <div class="col-md-2">
+          <label class="control-label" for="size">Size</label>
+          <select id="size" class="form-control formCtrl" ng-model="selectedaSize" ng-options="aSize as aSize.name for aSize in aSizes"></select>
+          </div>
+          <div class="col-md-2">
+          <label class="control-label" for="color">Color</label>
+          <select id="color" class="form-control formCtrl" ng-model="selectedaColor" ng-options="aColor as aColor.name for aColor in aColors"></select>
+          </div>
+          <div class="col-md-3">
+          <label class="control-label" for="aid">Id</label>
+          <input id="aid" type="text" name="input" ng-focus="checkvalue(idefault)" ng-blur="replacevalue(idefault)" class="form-control formCtrl" ng-model="idefault" value="" placeholder="#ID Search">
+          </div>
+          <div class="col-md-1">       
+          <button type="submit" class="aniSearch" ng-click="search()">GO</button>
+          </div>
+          <!-- <div class="col-md-3 locationField">
+          <label class="control-label" for="location" style="padding-left:15px;">Location</label>
+          <select id="location" class="form-control input-large" ng-model="selectedaLocation" ng-options="aLocation as aLocation.name for aLocation in aLocations" style="margin-right:15px;"></select>
+          </div> -->
+        </div>
+       <!--  <div class="form-group"> -->
+        	<!-- <div class="col-md-2">
+          <label class="control-label" for="aid">Id</label>
+          <input id="aid" type="text" name="input" ng-focus="checkvalue(idefault)" ng-blur="replacevalue(idefault)" class="form-control formCtrl" ng-model="idefault" value="" placeholder="#ID Search">
+          </div> -->
+          <!-- <div class="col-md-2">
+          <label class="control-label" for="color">Color</label>
+          <select id="color" class="form-control formCtrl" ng-model="selectedaColor" ng-options="aColor as aColor.name for aColor in aColors"></select>
+          </div> -->
+          <!-- <div class="col-md-2">
+          <label class="control-label" for="age">Age</label>
+		  <select id="age" class="form-control formCtrl" ng-model="selectedaAge" ng-options="aAge as aAge.name for aAge in aAges"></select>
+             </div> -->
+          <!-- <div class="col-md-3">       
+          <button type="submit" class="aniSearch" ng-click="search()">SEARCH</button>
+          </div>
+        </div> -->
+    </form>
+    <div class="qSort clearfix">
+        <span class="qsortTitle">SORT</span>
+        <a ng-click="qSort('Name')">Name</a>
+        <a ng-click="qSort('Gender')">Gender</a>
+        <a ng-click="qSort('Main%20Color')">Color</a>
+        <a ng-click="qSort('Breed')">Breed</a>
+        <a ng-click="qSort('Age')">Age</a>
+        <a ng-click="qSort('Located%20At')">Location</a>
+        <a class="timeField" ng-click="qSort('Time%20At%20Shelter')">Time at Shelter</a>
+        
+    </div>
+</nav>
+<!-- <section ng-swipe-right="qPages('2')"> -->
+  	<div class="pages">
+        <ul class="pagination pagination-lg">
+            <li ng-repeat="page in pages" ng-class="{true: 'active', false: 'inactive'}[page.current]">
+              <a ng-click="qPages(page.num)" href>{{page.title}}</a>
+            </li>
+        </ul>
+    </div>
+
+    
+    <div ng-repeat="row in animals | inSlicesOf:3" class="row aniRow" >
+      <div class="col-md-4 fade aniTout" ng-class="{true: 'video', false: ''}[animal.video]" ng-repeat="animal in row">
+        <a ng-href="#/details/{{animal.id}}" class="bg-info aniContainer" ng-click="setString(animal.shelter)" >
+            <span class="play">Play</span>
+          <!-- <h1>{{$index}}</h1> -->
+          <img ng-src="{{animal.image}}" class="img-responsive" imageonload />
+      		<span class="aniDetails">
+          	<span class="detailContain">
+                  <span class="aniTitle">{{animal.name}}</span>
+                  <!-- <span class="aniBreed">{{animal.id}}, {{animal.gender}}</span> -->
+                  <!-- <span class="aniBreed">{{animal.shelter}}</span> -->
+              </span>
+              <!-- <span class="subContain">
+                  <span class="aniExtra">{{animal.id}}, {{animal.gender}}</span>
+              </span> -->
+          </span>
+          <!--<span class="label label-primary">{{animal.gender}}</span><br />
+          <span class="label label-info">{{animal.shelter}}</span><br />
+          <span class="label label-warning">{{animal.breed}}, {{animal.age + ' ' + animal.doa}}</span><br />
+          <input ng-model="newItem.id" ng-value="animal.shelter"><br />-->
+        </a>
+      </div>
+    </div>
+    <div class="pages">
+        <ul class="pagination pagination-lg">
+            <li ng-repeat="page in pages" ng-class="{true: 'active', false: 'inactive'}[page.current]">
+              <a ng-click="qPages(page.num)" href>{{page.title}}</a>
+            </li>
+        </ul>
+    </div>
+<!-- </section> -->

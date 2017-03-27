@@ -86,6 +86,10 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_single(),
+    tribe_is_month(),
+    is_category(),
+    is_page(array( 48 )),
     is_page_template('template-custom.php'),
   ]);
 
@@ -100,6 +104,51 @@ function assets() {
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
+  }
+
+  $CDNPATH = 'http://d2xvf5r7iyxulk.cloudfront.net';
+  if (is_ssl()) {
+    $CDNPATH = 'https://d2xvf5r7iyxulk.cloudfront.net';
+  }
+
+  //Angular script injection
+  if (is_page(array( 48))){
+    wp_register_script('roots_angular', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js', false, null, true);
+    wp_register_script('roots_angular_routes',  '//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js', false, null, true);
+    wp_register_script('roots_angular_sani',  '//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-sanitize.js', false, null, true);
+    wp_register_script('roots_angular_app', get_home_url() . '/Adopt_Angular/js/app.js', false, null, true);
+    wp_register_script('roots_angular_touch', '//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-touch.js', false, null, true);
+    //wp_register_script('roots_angular_controllers', get_template_directory_uri() . '/Adopt_Angular/js/controllers.js', false, null, true);
+    wp_register_script('roots_angular_loading', get_home_url() . '/Adopt_Angular/js/loading-bar.js', false, null, true);
+    wp_register_script('roots_angular_social', get_home_url() . '/Adopt_Angular/js/angulike.js', false, null, true);
+    wp_register_script('roots_angular_meta', get_home_url() . '/Adopt_Angular/js/angularjs-viewhead.js', false, null, true);
+    wp_register_script('roots_angular_tube', $CDNPATH . '/js/angular-youtube-embed.js', false, null, true);
+    wp_register_script('roots_angular_twitter', 'http://platform.twitter.com/widgets.js', false, null, true);
+
+    wp_register_script('roots_angular_lbjs', '//cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.4/js/ngDialog.min.js', false, null, true);
+
+    wp_enqueue_style('roots_angular_loading_style', get_home_url() . '/Adopt_Angular/css/loading-bar.css', false, null);
+    wp_enqueue_script('roots_angular');
+    wp_enqueue_script('roots_angular_routes');
+    wp_enqueue_script('roots_angular_sani');
+    wp_enqueue_script('roots_angular_app');
+    wp_enqueue_script('roots_angular_touch');
+    //wp_enqueue_script('roots_angular_controllers');
+    wp_enqueue_script('roots_angular_loading');
+    wp_enqueue_script('roots_angular_social');
+    wp_enqueue_script('roots_angular_meta');
+    wp_enqueue_script('roots_angular_tube');
+    wp_enqueue_script('roots_angular_twitter');
+    wp_enqueue_script('roots_angular_pin');
+    wp_enqueue_script('roots_angular_lbjs');
+
+    wp_enqueue_style('roots_angular_lbjs', get_home_url() . '/Adopt_Angular/css/ngDialog.min.css', false, null);
+    wp_enqueue_style('roots_angular_lbcssdefault', get_home_url() . '/Adopt_Angular/css/ngDialog-theme-default.min.css', false, null);
+    wp_enqueue_style('roots_angular_lbcssplain', get_home_url() . '/Adopt_Angular/css/ngDialog-theme-plain.min.css', false, null);
+  }
+  if (is_page(array( 48))){
+        wp_register_script('roots_angular_controllers', get_home_url() . '/Adopt_Angular/js/controllers.js?v=032315', false, null, true);
+        wp_enqueue_script('roots_angular_controllers');
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);

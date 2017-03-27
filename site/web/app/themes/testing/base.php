@@ -41,7 +41,25 @@ use Roots\Sage\Wrapper;
           <div class="container">
               <div class="row">
                   <div class="col-lg-12">
-                      <h1><?php the_title(); ?></h1>
+                      <?php if( tribe_is_month() && !is_tax() ) { // The Main Calendar Page ?>
+                          <h1 class="home">Events</h1>
+                      <?php } elseif( tribe_is_month() && is_tax() ) { // Calendar Category Pages ?>
+                          <h1 class="home">Calendar Category: <?php echo tribe_meta_event_category_name(); ?></h1>
+                      <?php } elseif( tribe_is_event() && !tribe_is_day() && !is_single() && !is_tax() ) { // The Main Events List ?>
+                          <h1 class="home">Events List</h1>
+                      <?php } elseif( tribe_is_event() && !tribe_is_day() && !is_single() && is_tax() ) { // Category Events List ?>
+                          <h1 class="home">Events List: <?php echo tribe_meta_event_category_name(); ?></h1>
+                      <?php } elseif( tribe_is_event() && is_single() ) { // Single Events ?>
+                          <h1><?php the_title(); ?></h1>
+                      <?php } elseif( tribe_is_day() ) { // Single Event Days ?>
+                          <h1><?php $title = 'Events on: ' . date('F j, Y', strtotime(get_query_var( 'eventDate' ))); ?></h1>
+                      <?php } elseif( tribe_is_venue() ) { // Single Venues ?>
+                          <h1><?php the_title(); ?></h1>
+                      <?php } elseif( is_category() ) { // Single Venues ?>
+                          <h1><?php single_cat_title(); ?></h1>
+                      <?php } else { ?>
+                          <h1><?php the_title(); ?></h1>
+                      <?php } ?>
                   </div>
               </div>
           </div>
@@ -61,10 +79,21 @@ use Roots\Sage\Wrapper;
                 </ul>
                 <?php include Wrapper\sidebar_path(); ?>
               </aside><!-- /.sidebar -->
+
+                <div class="col-lg-9 block">
+                  <?php include Wrapper\template_path(); ?>
+                </div>
+
+            <?php else : ?>
+              <?php if(is_page(array( 48))): ?>
+                <!-- Check for Angular-->
+                <div class="col-lg-12" ng-view></div>
+              <?php else: ?>
+                <div class="col-lg-12 block">
+                  <?php include Wrapper\template_path(); ?>
+                </div>
+              <?php endif; ?>
             <?php endif; ?>
-            <div class="col-lg-9 block">
-              <?php include Wrapper\template_path(); ?>
-            </div>
           </div>
       </div>
     <?php } ?>

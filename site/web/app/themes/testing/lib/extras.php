@@ -19,7 +19,6 @@ function body_class($classes) {
   if (Setup\display_sidebar()) {
     $classes[] = 'sidebar-primary';
   }
-
   return $classes;
 }
 add_filter('body_class', __NAMESPACE__ . '\\body_class');
@@ -36,6 +35,15 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
  * Surrport for featured images
  */
 add_theme_support( 'post-thumbnails' );
+
+//Add conditonal Angular ngApp into HTML tag
+function nul_add_html_manifest( $output ) {
+        if (is_page(array( 48 ))){
+                $output .= ' ng-app="myApp"';
+                return $output;
+        }
+}
+add_filter( 'language_attributes', __NAMESPACE__ . '\\nul_add_html_manifest' );
 
 /**
  * Breadcrumbs
