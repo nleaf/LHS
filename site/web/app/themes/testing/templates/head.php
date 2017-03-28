@@ -5,6 +5,8 @@
 
 <?php if(is_page(array( 48))):?>
 	<base href="/services/adoption/adopt/" />
+<?php elseif(is_page(array( 62))): ?>
+	<base href="/services/other-services/lost-found/" />
 <?php endif; ?>
 
   <?php wp_head(); ?>

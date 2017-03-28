@@ -38,7 +38,7 @@ add_theme_support( 'post-thumbnails' );
 
 //Add conditonal Angular ngApp into HTML tag
 function nul_add_html_manifest( $output ) {
-        if (is_page(array( 48 ))){
+        if (is_page(array( 48,62 ))){
                 $output .= ' ng-app="myApp"';
                 return $output;
         }

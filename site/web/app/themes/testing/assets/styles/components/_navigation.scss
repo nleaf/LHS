@@ -208,6 +208,10 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 	    				margin-bottom: 1.3em;
 	    				color: $primary-white;
 	    				text-transform: uppercase;
+
+	    				a {
+	    					color: $primary-white;
+	    				}
 	    			}
 	    			> ul {
 	    				list-style: none;

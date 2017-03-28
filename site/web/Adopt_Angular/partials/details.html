@@ -1,39 +1,38 @@
 <link rel="stylesheet" href="../../../Adopt_Angular/css/details.css">
 
-<section>
-    <button type="button" class="btn btn-default btn-lg aniBack hidden-phone" onclick="window.history.back()"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back</button>
-
-    
-    <div ng-repeat="row in animals | inSlicesOf:3" class="row" style="margin-top:15px;">
-      <div class="span7 detailInfo" ng-repeat="animal in row">
-      	<div class="details">
-			<div class="aniDetailsMain">
-      			<h1 view-title>{{animal.name}}</h1>
-      			<h4>#{{animal.id}}</h4>
-                <meta view-head property="og:title" content="{{animal.name}}"> 
+<div ng-repeat="row in animals | inSlicesOf:3" class="row" style="margin-top:15px;">
+    <div class="col-md-9 detailInfo" ng-repeat="animal in row">
+        <div class="details">
+            <div class="aniDetailsMain">
+                <h1 view-title>{{animal.name}}</h1>
+                <h4>#{{animal.id}}</h4>
+                <meta view-head property="og:title" content="{{animal.name}}">
                 <meta view-head property="og:image" content="{{animal.image}}">
                 <meta view-head property="og:description" content="{{animal.genbreed + ' ' + animal.age + ' ' + animal.contact}}">
-        	<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@animalfndlv" />
-		<meta view-head property="twitter:title" content="{{animal.name}}">
-		<meta view-head property="twitter:description" content="{{animal.genbreed + ' ' + animal.age + ' ' + animal.contact}}">
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:site" content="@animalfndlv" />
+                <meta view-head property="twitter:title" content="{{animal.name}}">
+                <meta view-head property="twitter:description" content="{{animal.genbreed + ' ' + animal.age + ' ' + animal.contact}}">
                 <meta view-head property="twitter:image" content="{{animal.image}}">
-	</div>
+            </div>
             <div class="aniSocial">
-            <div class="ngface" fb-like="myModel.Url"></div>
-            <div class="ngtwitter" tweet="myModel.Text" tweeturl="myModel.Url" tweethandle="myModel.Handle"></div>
-            <div class="ngpin" pin-it="myModel.Name" pin-it-image="myModel.ImageUrl"></div>
+                <div class="ngface" fb-like="myModel.Url"></div>
+                <div class="ngtwitter" tweet="myModel.Text" tweeturl="myModel.Url" tweethandle="myModel.Handle"></div>
+                <div class="ngpin" pin-it="myModel.Name" pin-it-image="myModel.ImageUrl"></div>
             </div>
             <div class="aniDetailSub">
                 <span ng-if="animal.scomments"><h4 style="font-weight:400;">About me</h4><p>{{animal.scomments}}</p></span>
-                <div ng-bind-html="aContent"></div>
-                <div ng-include="'../../Adopt_Angular/partials/blankets.html'"></div>
-			</div>      		
+                <div ng-bind-html="aContent" class="animalContent"></div>
+                <img ng-src="{{animal.image}}" class="img-responsive" imageonload />
+                <!-- <div ng-include="'../../../Adopt_Angular/partials/blankets.html'"></div> -->
+            </div>
         </div>
-      </div>
-      <div class="span5" ng-repeat="animal in row" style="position:relative;">
-      	<a class="playbtn" ng-if="animal.video" ng-click="clickToOpen()">Play Video</a>
-      	<img ng-src="{{animal.image}}" class="img-responsive img-rounded" imageonload />
-      </div>
     </div>
-</section>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-default btn-lg aniBack hidden-phone" onclick="window.history.back()">Back</button>
+    </div>
+    <!-- <div class="col-md-5" ng-repeat="animal in row" style="position:relative;">
+        <a class="playbtn" ng-if="animal.video" ng-click="clickToOpen()">Play Video</a>
+        <img ng-src="{{animal.image}}" class="img-responsive img-rounded" imageonload />
+    </div> -->
+</div>

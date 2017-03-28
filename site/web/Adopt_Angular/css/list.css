@@ -103,7 +103,7 @@ form select { float:right;}
 	border: 0px;
 	width: 100%;
 }
-.formCtrl { width:202px; border:#e6ba8d 1px solid; border-radius:0px; float:right; margin-left: 10px;}
+.formCtrl { width:202px; border-radius:0px; float:right; margin-left: 10px;}
 input.formCtrl { padding:4px; width:192px;}
 .input-large { border:#e6ba8d 1px solid; border-radius:0px; width:190px;}
 .controls-row { margin-bottom:8px;}

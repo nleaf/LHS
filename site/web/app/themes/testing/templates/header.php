@@ -60,38 +60,38 @@ wp_nav_menu( array(
               <div class="container-fluid">
                   <div class="row">
                       <div class="col-md-3 adopt">
-                          <h2>Services</h2>
+                          <h2><a href="/services/">Services</a></h2>
                           <ul class="">
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Adoption</a>
+                                  <a href="/services/adoption/" role="button" aria-haspopup="true">Adoption</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Pet Surrender</a>
+                                  <a href="/services/pet-surrender/" role="button" aria-haspopup="true">Pet Surrender</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Other Services</a>
+                                  <a href="/services/other-services/" role="button" aria-haspopup="true">Other Services</a>
                               </li>
                           </ul>
                       </div>
                       <div class="col-md-3 news">
-                          <h2>News</h2>
+                          <h2><a href="/news-events/">News</a></h2>
                           <ul class="">
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Events Calendar</a>
+                                  <a href="/events/" role="button" aria-haspopup="true">Events Calendar</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Host an Event</a>
+                                  <a href="/news-events/host-an-event/" role="button" aria-haspopup="true">Host an Event</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">News</a>
+                                  <a href="/category/News/" role="button" aria-haspopup="true">News</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Blog</a>
+                                  <a href="/category/blog/" role="button" aria-haspopup="true">Blog</a>
                               </li>
                           </ul>
                       </div>
                       <div class="col-md-3 donate">
-                          <h2>Donate</h2>
+                          <h2><a href="/donate/">Donate</a></h2>
                           <ul class="">
                               <li>
                                   <a href="#" role="button" aria-haspopup="true">Loyal Friends Monthly Giving</a>
@@ -106,39 +106,39 @@ wp_nav_menu( array(
                                   <a href="#" role="button" aria-haspopup="true">Special Funds</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Donate a Vehicle</a>
+                                  <a href="/donate/donate-a-vehicle/" role="button" aria-haspopup="true">Donate a Vehicle</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Wishlist</a>
+                                  <a href="/donate/wishlist/" role="button" aria-haspopup="true">Wishlist</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Other Ways to Give</a>
+                                  <a href="/donate/other-ways-to-give/" role="button" aria-haspopup="true">Other Ways to Give</a>
                               </li>
                           </ul>
                       </div>
                       <div class="col-md-3 about">
-                          <h2>About Us</h2>
+                          <h2><a href="/about-us/">About Us</a></h2>
                           <ul class="">
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Our Story</a>
+                                  <a href="/about-us/our-story/" role="button" aria-haspopup="true">Our Story</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Our Team</a>
+                                  <a href="/about-us/our-team/" role="button" aria-haspopup="true">Our Team</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Our Financials</a>
+                                  <a href="/about-us/our-financials/" role="button" aria-haspopup="true">Our Financials</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Measuring our Progress</a>
+                                  <a href="/about-us/measuring-our-progress/" role="button" aria-haspopup="true">Measuring our Progress</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Media Kit</a>
+                                  <a href="/about-us/media-kit/" role="button" aria-haspopup="true">Media Kit</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Employment Opportunities</a>
+                                  <a href="/about-us/employment-opportunities/" role="button" aria-haspopup="true">Employment Opportunities</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Directory</a>
+                                  <a href="#" role="button" aria-haspopup="true">Directory?</a>
                               </li>
                           </ul>
                       </div>
@@ -158,7 +158,7 @@ wp_nav_menu( array(
                   </ul> -->
               </li>
               <li class="donate">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Donate</a><!-- <div class="arrowRight">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="donate/" role="button" aria-haspopup="true" aria-expanded="false">Donate</a><!-- <div class="arrowRight">
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </div> -->
@@ -171,32 +171,29 @@ wp_nav_menu( array(
                           </a>
                       </li>
                       <li>
-                          <a href="about.html">Loyal Friends Monthly Giving</a>
+                          <a href="#" role="button" aria-haspopup="true">Loyal Friends Monthly Giving</a>
                       </li>
                       <li>
-                          <a href="about.html">One-time donation</a>
+                          <a href="#" role="button" aria-haspopup="true">One-Time Donation</a>
                       </li>
                       <li>
-                          <a href="about.html">Honor and Memorial</a>
+                          <a href="#" role="button" aria-haspopup="true">Honor and Memorial Donations</a>
                       </li>
                       <li>
-                          <a href="about.html">Donations</a>
+                          <a href="#" role="button" aria-haspopup="true">Special Funds</a>
                       </li>
                       <li>
-                          <a href="about.html">Special Funds</a>
+                          <a href="/donate/donate-a-vehicle/" role="button" aria-haspopup="true">Donate a Vehicle</a>
                       </li>
                       <li>
-                          <a href="about.html">Donate a vehicle</a>
+                          <a href="/donate/wishlist/" role="button" aria-haspopup="true">Wishlist</a>
                       </li>
                       <li>
-                          <a href="about.html">Wishlist</a>
-                      </li>
-                      <li>
-                          <a href="about.html">Other ways to give</a>
+                          <a href="/donate/other-ways-to-give/" role="button" aria-haspopup="true">Other Ways to Give</a>
                       </li>
                   </ul>
               </li>
-              <li class="involved"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Get Involved</a>
+              <li class="involved"><a class="dropdown-toggle" data-toggle="dropdown" href="get-involved/" role="button" aria-haspopup="true" aria-expanded="false">Get Involved</a>
                   <ul class="dropdown-menu">
                       <li class="arrowRight">
                           <a class="return">
@@ -206,11 +203,14 @@ wp_nav_menu( array(
                           </a>
                       </li>
                       <li>
-                          <a href="about.html">Stuff</a>
+                          <a href="/get-involved/foster/">Foster</a>
+                      </li>
+                      <li>
+                          <a href="/get-involved/volunteer/">Volunteer</a>
                       </li>
                   </ul>
               </li>
-              <li class="lostfound"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lost & Found</a>
+              <li class="lostfound"><a class="dropdown-toggle" data-toggle="dropdown" href="services/other-services/lost-found/" role="button" aria-haspopup="true" aria-expanded="false">Lost & Found</a>
                   <ul class="dropdown-menu">
                       <li>
                           <a href="about.html">Stuff</a>
@@ -219,8 +219,15 @@ wp_nav_menu( array(
               </li>
               <li class="more"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                   <ul class="dropdown-menu">
+                      <li class="arrowRight">
+                          <a class="return">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="text">Main Menu</span>
+                          </a>
+                      </li>
                       <li>
-                          <a href="about.html">Stuff</a>
+                          <a href="about.html">What here?</a>
                       </li>
                   </ul>
               </li>

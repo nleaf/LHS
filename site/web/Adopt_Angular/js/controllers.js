@@ -366,7 +366,7 @@ animalCtrl.controller('DetailCtrl', ['$scope', '$http', '$routeParams', 'animalS
     $scope.objectValue = sharedProperties.getObject();
 	 
 	var whichId = $routeParams.itemId;
-	var uri = 'http://www.petharbor.com/detail.asp?ID=' + whichId + '&LOCATION=LAWR&searchtype=ID&start=4&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_animal&nomax=1&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LAWR%27&atype=&where=ID_' + whichId;
+	var uri = 'http://www.petharbor.com/detail.asp?ID=' + whichId + '&LOCATION=LAWR&searchtype=ID&start=4&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_animal&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=ID_' + whichId;
 	var enUrl = encodeURIComponent(uri);
 
 	$http.get('http://lawrencehumane.dev/ngservice/example/example_adopt.php?d='+ enUrl)

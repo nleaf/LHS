@@ -120,7 +120,10 @@ function listQ($qUrl="http://www.petharbor.com/results.asp?searchtype=ADOPT&star
 
 function listO($qUrl="http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=8&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=type_Cat,gender_0,size_0,age_0,color_0&NewOrderBy=Time%20At%20Shelter&PAGE=1") {
 
-	$html = file_get_html($qUrl);
+	$htmlLoad = getHTML($qUrl,10);
+
+	$html = new simple_html_dom();
+	$html->load($htmlLoad);
 	$first = true;
 	$tPages = $html->find("center",-3);
 	$tApages = $tPages->find('a');
@@ -208,7 +211,10 @@ function listO($qUrl="http://www.petharbor.com/results.asp?searchtype=LOST&start
 
 
 function listD($qUrl="") {
-	$html = file_get_html($qUrl);
+	$htmlLoad = getHTML($qUrl,10);
+
+	$html = new simple_html_dom();
+	$html->load($htmlLoad);
 	$ret = $html->find('.DetailTable');
 	$main = $ret[0];
 	$secondary = $ret[1];

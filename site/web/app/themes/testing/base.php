@@ -85,7 +85,7 @@ use Roots\Sage\Wrapper;
                 </div>
 
             <?php else : ?>
-              <?php if(is_page(array( 48))): ?>
+              <?php if(is_page(array( 48,62))): ?>
                 <!-- Check for Angular-->
                 <div class="col-lg-12" ng-view></div>
               <?php else: ?>

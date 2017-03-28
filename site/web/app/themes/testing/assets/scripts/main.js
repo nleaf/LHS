@@ -26,8 +26,6 @@
             is_mobile = false;       
         }
         if(!is_mobile){
-          console.log('Not Mobile');
-
           $('.dknav .dropdown-toggle').click(function() {
             current = $(this);
             $('.navoverlay').toggleClass('open');
@@ -49,7 +47,8 @@
                 $('.header').removeClass("sticky");
                 //$('body>.container-fluid').removeClass("extra");
               }
-              if($('.sidebar')){
+              if($('.sidebar').length){
+                console.log('here');
                 var stucker = $('.sidebar').offset().top - 220;
                 var stuckerWidth = $('.sidebar').outerWidth();
                 var bodyOffset = $('.content').offset().top - 10;
@@ -140,6 +139,19 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+        $.getJSON( "../ngservice/example/topFive.php", function( data ) {
+          var items = [];
+          $.each( data[0], function( key, val ) {
+            items.push( "<div class='col-lg-6'><div><a href='/services/adoption/adopt/#/details/"+val.id+"' title='Learn More about "+val.name+"'><img src='"+val.image+"' class='img-responsive'></div></div>" );
+          });
+         
+          $( "<div/>", {
+            "class": "row",
+            html: items.join( "" )
+          }).appendTo( ".qAnimals .contain" );
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

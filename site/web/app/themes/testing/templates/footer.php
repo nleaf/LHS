@@ -20,10 +20,14 @@
             
             <div class="col-lg-3 newsletter">
                 <h3>Newsletter</h3>
-                <input type="email" value="" name="EMAIL" class="required email input-xlarge" id="mce-EMAIL" placeholder="john.doe@email.com">
+                <form action="//lawrencehumane.us5.list-manage.com/subscribe/post?u=24a6801d143fad0512187ac19&amp;id=8a9effcc37" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="john.doe@email.com">
                 <input type="text" value="" name="FNAME" class="required input-xlarge" id="mce-FNAME" placeholder="John">
                 <input type="text" value="" name="LNAME" class="required input-xlarge" id="mce-LNAME" placeholder="Doe">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_24a6801d143fad0512187ac19_8a9effcc37" tabindex="-1" value=""></div>
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn">
+                </form>
             </div>
             <?php
 				$args = array( 'numberposts' => '1', 'category' => 3 );
@@ -51,14 +55,19 @@
 				}
 				wp_reset_query();
 			?>
+            <?php
+                $page_name = get_page_by_title( 'Foster' );
+                $page_title = get_page_by_title( 'Foster' )->post_title;
+                $page_excerpt = get_page_by_title( 'Foster' )->post_excerpt;
+                $page_content = get_page_by_title( 'Foster' )->post_content;
 
-            <div class="col-lg-3 sup">
-                <h3>Foster Information</h3>
-                <h4>Example Title here</h4>
-                <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec velit ac magna dignissim porta. In lacus leo, ornare non mollis ut, consequat eu orci. Praesent ut tincidunt urna.</p>
-                <a href="" class="btn">Read More</a>
-            </div>
+                echo '<div class="col-lg-3 sup">
+                        <h3>Foster Information</h3>
+                        <p>'.$page_excerpt.'</p>
+                        <a href="'.get_permalink($page_name).'" class="btn">Read More</a>
+                    </div>';
+                wp_reset_query();
+            ?>
         </section>
     </div>
     <div class="container-fluid">

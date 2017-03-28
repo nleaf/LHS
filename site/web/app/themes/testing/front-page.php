@@ -49,38 +49,6 @@
         <div class="col-lg-4 qAnimals">
             <div class="contain clear">
                 <h2>Your <span>best friend</span> awaits</h2>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div>
-                            <img src="app/uploads/2017/03/pet_1.png" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div>
-                            <img src="app/uploads/2017/03/pet_2.png" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div>
-                            <img src="app/uploads/2017/03/pet_3.png" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div>
-                            <img src="app/uploads/2017/03/pet_4.png" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div>
-                            <img src="app/uploads/2017/03/pet_1.png" class="img-responsive">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div>
-                            <img src="app/uploads/2017/03/pet_2.png" class="img-responsive">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
         
