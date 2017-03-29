@@ -15,10 +15,10 @@ $primary-black: #21201f;
 
 @font-face {
 	font-family: 'Permanent Marker';
-	src: url('PermanentMarker.eot');
-	src: url('PermanentMarker.eot?#iefix') format('embedded-opentype'),
-		url('PermanentMarker.woff') format('woff'),
-		url('PermanentMarker.ttf') format('truetype');
+	src: url('../../assets/fonts/PermanentMarker.eot');
+	src: url('../../assets/fonts/PermanentMarker.eot?#iefix') format('embedded-opentype'),
+		url('../../assets/fonts/PermanentMarker.woff') format('woff'),
+		url('../../assets/fonts/PermanentMarker.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }

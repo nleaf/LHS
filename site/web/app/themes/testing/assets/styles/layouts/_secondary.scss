@@ -26,16 +26,24 @@
 	background-image: url(../images/feat_image.png);
 	background-size: cover;
 
+	.colorBar {
+		width: 20%;
+	    background: $primary-green;
+	    height: 43.5%;
+	    position: absolute;
+	    bottom: 0px;
+	}
 	.container {
 		>div {
 			position: relative;
 		}
 	}
 	h1 {
-		font-size: 54px;
+		font-size: 50px;
 		position: absolute;
 		bottom: 0px;
 		background: $primary-green;
+		background-image: url(../images/paw.png);
 		float: left;
 		margin-bottom: 0px;
 		margin-left: 0px;
@@ -56,11 +64,21 @@
 		ul{
 			
 			li {
+				margin-bottom: 1rem;
+				&.current_page_item {
+					
+					a {
+						font-weight: 600;
+						border: 2px solid $primary-green;
+						color: $primary-green;
+					}
+				}
+
 				a {
 					display: block;
 					font-size: 1.29em;
 					text-align: center;
-					padding: 18px 0px;
+					padding: 18px 0px 18px 0px;
 					font-weight: 500;
 					color: $primary-lgray;
 					border: 2px solid $primary-white;
@@ -87,16 +105,28 @@
 
 		h2{
 			color: $primary-green;
-			font-weight: 700;
-			font-size: 2.2;
+			font-weight: 600;
 			margin-bottom: 52px;
+			font-size:32px;
 			&:first-child {
 				margin-top: 15px;
 			}
+			span {
+				font-weight:700;
+			}
+		}
+		h3 {
+			color: $primary-green;
+			font-weight: 600;
 		}
 		p {
 			line-height: 1.9em;
 			margin-bottom: 1.8em;
+		}
+		ul {
+			line-height: 1.9em;
+			margin-bottom: 1.8em;
+			margin-top: .9em;
 		}
 	}
 }
@@ -121,17 +151,18 @@
 			}
 		}
 		h1 {
-			font-size: 54px;
+			font-size: 50px;
 			position: absolute;
-			padding-right: 50px;
-			padding-top: 45px;
-			padding-bottom: 45px;
-			padding-left: 45px;
+			padding: 28px 50px 28px 80px;
 			bottom: 0px;
 			background: $primary-green;
 			float: left;
+			background-image: url(../images/paw.png);
+			background-repeat: no-repeat;
+			background-position-x: 0px;
+			background-position-y: 30px;
 			margin-bottom: 0px;
-			font-weight: 600;
+			font-weight: 700;
 			color: $primary-white;
 		}
 }

@@ -75,7 +75,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 	//console.log($location.absUrl());
 	
 	$scope.$on('$viewContentLoaded', function(event) {
-		$window.ga('send', 'pageview', { page: 'lost/search'+$location.path(), title: 'Lost Search | Animal Foundation' });
+		$window.ga('send', 'pageview', { page: 'lost/search'+$location.path(), title: 'Lost Search' });
 		//console.log('gaq:' + $location.path());
 	 });
 	
@@ -203,13 +203,13 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 	var aLocation = $routeParams.location;
 	var aSort = $routeParams.qsort;
 
-	var urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
+	var urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
 	var enUrl = encodeURIComponent(urib);
 	var uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl;
 
 	if(aSort) {
 		//console.log('aSort');
-	  urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor + '&NewOrderBy=' + aSort;
+	  urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor + '&NewOrderBy=' + aSort;
 	    enUrl = encodeURIComponent(urib);
 	    uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl + '%26PAGE%3D' + aPage;
 	}else if (aLocation){
@@ -217,12 +217,12 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 		uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl + '%26PAGE%3D' + aPage;
 	}else if ($scope.aInputId){
 		//console.log('aInput');
-		urib = 'http://www.petharbor.com/results.asp?searchtype=ID&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LSVG%27&atype=&nav=1&start=4&nomax=1&page=1&where=ID_'+$scope.aInputId;
+		urib = 'http://www.petharbor.com/results.asp?searchtype=ID&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LAWR%27&atype=&nav=1&start=4&nomax=1&page=1&where=ID_'+$scope.aInputId;
 	    enUrl = encodeURIComponent(urib);
 	    uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl;
 	}else{
 		//console.log('aFoo');
-		urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0&NewOrderBy=Time%20At%20Shelter&PAGE=1';
+		urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0&NewOrderBy=Time%20At%20Shelter&PAGE=1';
 	    enUrl = encodeURIComponent(urib);
 		uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl;
 	};
@@ -242,7 +242,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
     	if($scope.idefault) {	
     		var aniId = $scope.idefault;  
 			//console.log(aniId);
-	    	urib = 'http://www.petharbor.com/results.asp?searchtype=ID&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LSVG%27&atype=&nav=1&start=4&nomax=1&page=1&where=ID_'+aniId;
+	    	urib = 'http://www.petharbor.com/results.asp?searchtype=ID&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LAWR%27&atype=&nav=1&start=4&nomax=1&page=1&where=ID_'+aniId;
 		    enUrl = encodeURIComponent(urib);
 		    uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl;
 		    $location.path('/list/'+ aniId, false);
@@ -253,7 +253,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 	    	aSize = $scope.selectedaSize.value;
 	    	aColor = $scope.selectedaColor.value;
 	    	aLocation = $scope.selectedaLocation.value;
-	        urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_' + aLocation + '&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
+	        urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_' + aLocation + '&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
 		    enUrl = encodeURIComponent(urib);
 		    uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl + '%26PAGE%3D';
 		    $location.path('/list/'+ aType +'/'+ aGender +'/'+ aSize +'/'+ aAge +'/'+ aColor +'/1/' + aLocation, false);
@@ -278,7 +278,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 	    }
 		
     	if($routeParams.location) {
-	  		urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor + '&NewOrderBy=' + aSort + '&PAGE=1';
+	  		urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor + '&NewOrderBy=' + aSort + '&PAGE=1';
 		}else{
 			//console.log($routeParams);
 			//console.log('test2');
@@ -288,7 +288,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 			aAge = 'age_0';
 			aColor = 'color_0';
 			aLocation = 'lsvg_new';
-			urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0&NewOrderBy='+ aSort + '&PAGE=1';
+			urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0&NewOrderBy='+ aSort + '&PAGE=1';
 		};
 	    enUrl = encodeURIComponent(urib);
 	    uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?l=' + enUrl;
@@ -304,7 +304,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
     	//console.log(pagenum);
 
 	    if($routeParams.location) {
-	  		urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
+	  		urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
 		}else{
 			aType = 'type_Dog';
 			aGender = 'gender_0';
@@ -312,7 +312,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 			aAge = 'age_0';
 			aColor = 'color_0';
 			aLocation = 'lsvg_new';
-			urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LSVG%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0';
+			urib = 'http://www.petharbor.com/results.asp?searchtype=LOST&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=9&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0';
 		};
 	    enUrl = encodeURIComponent(urib);
 	    uri = 'https://animalfoundation.com/ngservice/example/example_adopt.php?o=' + enUrl + '%26PAGE%3D' + pagenum;
@@ -347,7 +347,7 @@ animalCtrl.controller('DetailCtrl', ['$scope', '$http', '$routeParams', 'animalS
 	 });*/
 	 
 	var whichId = $routeParams.itemId;
-	var uri = 'http://www.petharbor.com/detail.asp?ID=' + whichId + '&LOCATION=LSVG&searchtype=ID&start=4&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_animal&nomax=1&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LSVG%27&atype=&where=ID_' + whichId;
+	var uri = 'http://www.petharbor.com/detail.asp?ID=' + whichId + '&LOCATION=LAWR&searchtype=ID&start=4&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_animal&nomax=1&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LAWR%27&atype=&where=ID_' + whichId;
 	var enUrl = encodeURIComponent(uri);
 
 	$http.get('https://animalfoundation.com/ngservice/example/example_adopt.php?d='+ enUrl).success (function(data){
@@ -359,13 +359,11 @@ animalCtrl.controller('DetailCtrl', ['$scope', '$http', '$routeParams', 'animalS
 			$scope.myModel = {
 				Text: "Adopt "+$scope.animals[0].name+" today!", // text for tweet and pinIt buttons
 				Name: "Adopt "+$scope.animals[0].name+" today!", // text for tweet and pinIt buttons
-				Url: "https://animalfoundation.com/adopt/search/details/"+$scope.animals[0].id,
+				Url: "http://lawrencehumane.org/services/other-services/lost-found/details/"+$scope.animals[0].id,
 				Handle: "animalfndlv",
 				ImageUrl: $scope.animals[0].image // image url for pinIt button
 			};
 
-			$window.ga('send', 'pageview', { page: 'lost/search'+$location.path(), title: $scope.animals[0].name+' | LF Animal Foundation' });
-			
 			$scope.clickToOpen = function () {
 				ngDialog.open({ 
 					template: '../../Adopt_Angular/partials/popup.html',

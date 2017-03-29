@@ -72,11 +72,12 @@
             <div class="col-lg-4 blurb highlight">
                 <h2>
                     <a href="#">
-                      <span class="text">Life Saving</span><span class="text">Impact Grant</span>
+                    <span class="text">FOR THEM</span>
+                      <!-- <span class="text">FOR</span><span class="text">THEM</span> -->
                     </a>
                 </h2>
-                <h3>PRESS release April 28, 2016</h3>
-                <p>The Petco Foundation has generously awarded us a $250,000 Lifesaving Impact Award grant to help save more lives! We guarantee Pecan isn't the only one smiling at the shelter right now!</p>
+                <h3>The Campaign for <br/>the Lawrence Humane Society</h3>
+                <p>The Lawrence Humane Society is a critically needed local resource for Douglas County and Lawrence, but is held back by limitations of an aging, inadequate, and failing facility. With your support, we can build a shelter where we can accomplish more to save animals’ lives and improve the well-being of pets and people in our community.</p>
             </div>
 
             <div class="col-lg-4 blurb feature">
@@ -87,19 +88,19 @@
                 <div>
                     <img src="app/uploads/2017/03/bh_ph2.png" class="img-responsive">
                 </div>
-                <p>Foster Care Volunteers open their hearts and homes</p>
+                <p>Learn how you can join us in making a difference … FOR THEM:</p>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">Volunteer <span class="arrow-right"></span></a>
+                        <a href="#">The Need <span class="arrow-right"></span></a>
                     </li>
                     <li>
-                        <a href="#">Adoption Ambassador<span class="arrow-right"></span></a>
+                        <a href="#">The New Shelter<span class="arrow-right"></span></a>
                     </li>
                     <li>
-                        <a href="#">Community Service<span class="arrow-right"></span></a>
+                        <a href="#">The Progress<span class="arrow-right"></span></a>
                     </li>
                     <li>
-                        <a href="#">Employment Oppurtunities<span class="arrow-right"></span></a>
+                        <a href="/donate">Donate<span class="arrow-right"></span></a>
                     </li>
                 </ul>
             </div>
@@ -167,7 +168,7 @@
                     </a>
                 </h2>
                 <p>Your support makes it possible for us to give our shelter animals a second chance at a happy, healthy life. When you donate to the Lawrence Humane Society, you are providing a life-saving and life-changing gift to an furry friends in need.</p>
-                <a href="" class="btn">
+                <a href="/donate" class="btn">
                     Help Now
                 </a>
             </div>

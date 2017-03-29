@@ -38,6 +38,7 @@ use Roots\Sage\Wrapper;
       <!-- Sub-Header -->
       <!-- Sub-Header class needs to be populated with featured image as background! -->
       <div class="container-fluid subHeader">
+          <div class="colorBar"></div>
           <div class="container">
               <div class="row">
                   <div class="col-lg-12">
@@ -71,12 +72,21 @@ use Roots\Sage\Wrapper;
               <aside class="col-lg-3 sidebar">
                 <ul class="list-unstyled">
                     <?php
-                      wp_list_pages( array(
+                      $children = get_pages( array( 'child_of' => $post->ID ) );
+                      if( count( $children ) == 0 ) {
+                          wp_list_pages( array(
+                          'title_li'    => '',
+                          'child_of'    => $post->post_parent
+                          ) );
+                      }else{
+                          wp_list_pages( array(
                           'title_li'    => '',
                           'child_of'    => $post->ID
-                      ) );
+                          ) );
+                      };
                     ?>
                 </ul>
+                <?php Roots\Sage\Extras\wpb_list_child_pages(); ?>
                 <?php include Wrapper\sidebar_path(); ?>
               </aside><!-- /.sidebar -->
 
