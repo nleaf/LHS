@@ -2,12 +2,16 @@
 .header {
 	background: #fff;
 	border-bottom: 1px solid #e5e5e5;
+    transition: all 0.5s ease;
+    &.full {
+        height: 100% !important;
+    }
 
 	&.sticky {
 	    position: fixed;
     	width: 100%;
     	margin: 0;
-    	height: 66px;
+    	height: 74px;
     	z-index: 9999;
     	background-color: #FFF;
 	}
@@ -41,7 +45,7 @@
 @media (min-width: $screen-sm-min) { 
 	.header {
 		overflow: hidden;
-		
+
 	    .logoText {
 	        margin-left: 0px;
 	    }

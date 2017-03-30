@@ -35,11 +35,18 @@
 	position: absolute;
 	width: 100%;
 	overflow: initial;
-	height: 100%;
 	z-index: 100;
 	margin:0px;
 	padding:0px;
 
+	&.collapse {
+		height:0px !important;
+		visibility: hidden;
+		&.in {
+			visibility: visible;
+			height: 100% !important;
+		}
+	}
 	.navbar-nav > li > a { padding-top: 0px; padding-bottom:0px; }
 	.navbar-nav {
 		margin-top: 0px;

@@ -80,6 +80,14 @@
 	}
 
 	.blurb {
+		&:hover {
+
+			>div {
+				border: 6px solid $primary-green;
+			}
+
+		}
+			
 		&.green {
 			>div {
 				border: 6px solid $primary-green;
@@ -90,6 +98,13 @@
 				text-align: center;
 				margin-bottom: 30px;
 				transform: translateY(0px) translateX(0vw) rotate(-2deg);
+			}
+			&:hover {
+
+				>div {
+					border: 6px solid $primary-purple;
+				}
+
 			}
 		}
 		&.links {

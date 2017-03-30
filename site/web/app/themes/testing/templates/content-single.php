@@ -17,7 +17,7 @@
     <?php //comments_template('/templates/comments.php'); ?>
   </article>
 
-  <h2 class="recent">Recent Posts</h2>
+  <h3 class="recent">Recent Posts</h3>
     <ul class="list-inline recent">
     <?php
         $args = array( 'numberposts' => '3' );

@@ -147,10 +147,10 @@ wp_nav_menu( array(
           </div>
       </div>
 
-      <div id="navbar" class="mnav navbar-collapse collapse visible-xs">
+      <div id="navbar" class="mnav navbar-collapse collapse visible-xs" style="height:0px;">
 
           <ul class="nav navbar-nav visible-xs">
-              <li class="adopt"><a href="adopt.html" role="button">Adopt</a>
+              <li class="adopt"><a href="/services/adoption/adopt/" role="button">Adopt</a>
                   <!-- <ul class="dropdown-menu">
                       <li>
                           <a href="about.html">Stuff</a>
@@ -189,7 +189,7 @@ wp_nav_menu( array(
                           <a href="/donate/wishlist/" role="button" aria-haspopup="true">Wishlist</a>
                       </li>
                       <li>
-                          <a href="/donate/other-ways-to-give/" role="button" aria-haspopup="true">Other Ways to Give</a>
+                          <a href="/donate/other-ways-to-give/" role="button" aria-haspopup="true">Other ways to give</a>
                       </li>
                   </ul>
               </li>
@@ -210,12 +210,12 @@ wp_nav_menu( array(
                       </li>
                   </ul>
               </li>
-              <li class="lostfound"><a class="dropdown-toggle" data-toggle="dropdown" href="services/other-services/lost-found/" role="button" aria-haspopup="true" aria-expanded="false">Lost & Found</a>
-                  <ul class="dropdown-menu">
+              <li class="lostfound"><a href="/services/other-services/lost-found/">Lost & Found</a>
+                  <!-- <ul class="dropdown-menu">
                       <li>
                           <a href="about.html">Stuff</a>
                       </li>
-                  </ul>
+                  </ul> -->
               </li>
               <li class="more"><a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">More</a>
                   <ul class="dropdown-menu">
@@ -227,7 +227,10 @@ wp_nav_menu( array(
                           </a>
                       </li>
                       <li>
-                          <a href="about.html">What here?</a>
+                          <a href="/events">Events</a>
+                      </li>
+                      <li>
+                          <a href="/about-us">About Us</a>
                       </li>
                   </ul>
               </li>
