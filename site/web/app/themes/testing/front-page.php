@@ -137,7 +137,7 @@
 			    echo '<div class="col-lg-4 blurb green">
 			            <div>
 			                <a href="'.get_permalink($event->ID).'">
-			                    <img src="'.get_the_post_thumbnail_url($recent["ID"], 'event-post').'" class="img-responsive">
+			                    <img src="'.get_the_post_thumbnail_url($event->ID, 'event-post').'" class="img-responsive">
 			                </a>
 			            </div>
 			            <h2>
