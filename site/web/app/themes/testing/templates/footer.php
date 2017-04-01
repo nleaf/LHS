@@ -64,12 +64,12 @@
                 // Loop through the events, displaying the title
                 // and content for each
                 foreach ( $events as $event ) {
-                    echo "<div class='col-lg-3 sup'>
+                    echo '<div class="col-lg-3 sup">
                         <h3>Events</h3>
-                        <h4>$event->post_title</h4>
-                        <p>$event->post_content</p>
-                        <a href='$event->guid' class='btn'>Read More</a>
-                        </div>";
+                        <h4>'.$event->post_title.'</h4>
+                        <p>'.get_the_excerpt($event->post_content).'</p>
+                        <a href="'.$event->guid.'" class="btn">Read More</a>
+                        </div>';
                 }
             ?>
         </section>
