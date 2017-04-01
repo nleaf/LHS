@@ -32,6 +32,7 @@ function wpdocs_theme_setup() {
     add_image_size( 'news-post', 434, 243, true ); // 300 pixels wide (and unlimited height)
     add_image_size( 'blog-post', 239, 243, true ); // (cropped)
     add_image_size( 'recent-post', 262, 163, true ); // (cropped)
+    add_image_size( 'event-post', 336, 266, true ); // (cropped)
 }
 /**
  * Add author names
