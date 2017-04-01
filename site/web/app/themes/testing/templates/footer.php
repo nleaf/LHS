@@ -67,7 +67,7 @@
                     echo '<div class="col-lg-3 sup">
                         <h3>Events</h3>
                         <h4>'.$event->post_title.'</h4>
-                        <p>'.get_the_excerpt($event->post_content).'</p>
+                        <p>'.get_the_excerpt($event).'</p>
                         <a href="'.$event->guid.'" class="btn">Read More</a>
                         </div>';
                 }
