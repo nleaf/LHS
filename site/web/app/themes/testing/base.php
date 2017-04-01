@@ -71,6 +71,19 @@ use Roots\Sage\Wrapper;
             <?php if (Setup\display_sidebar()) : ?>
               <aside class="col-lg-3 sidebar">
                 <ul class="list-unstyled">
+                  <?php 
+                    $parentId = wp_get_post_parent_id( $post->ID );
+                    if( $parentId = '160' ) { ?>
+                      <li>
+                          <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=143&" role="button" aria-haspopup="true" target="_new">Loyal Friends Monthly Giving</a>
+                      </li>
+                      <li>
+                          <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=157&" role="button" aria-haspopup="true" target="_new">One-Time Donation</a>
+                      </li>
+                      <li>
+                          <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=137&" role="button" aria-haspopup="true" target="_new">Honor and Memorial Donations</a>
+                      </li>
+                  <?php } ?>
                     <?php
                       $children = get_pages( array( 'child_of' => $post->ID ) );
                       if( count( $children ) == 0 ) {

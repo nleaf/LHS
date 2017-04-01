@@ -19,7 +19,7 @@
 			foreach( $recent_posts as $recent ){
 				echo '<div class="col-lg-5 blurb">
 				            <div>
-				                <img src="'. get_the_post_thumbnail_url($recent["ID"]) . '" class="img-responsive">
+				                <img src="'. get_the_post_thumbnail_url($recent["ID"], 'news-post') . '" class="img-responsive">
 				                <span class="tag">News</span>
 				            </div>
 				            <h2>
@@ -36,7 +36,7 @@
 			foreach( $recent_posts as $recent ){
 				echo '<div class="col-lg-3 blurb">
 				            <div>
-				                <img src="'. get_the_post_thumbnail_url($recent["ID"]) . '" class="img-responsive">
+				                <img src="'. get_the_post_thumbnail_url($recent["ID"], 'blog-post') . '" class="img-responsive">
 				                <span class="tag">Blog</span>
 				            </div>
 				            <h2>
@@ -81,12 +81,12 @@
             </div>
 
             <div class="col-lg-4 blurb feature">
-                <img src="app/uploads/2017/03/bh_ph1.png">
+                <img src="app/uploads/2017/04/bh_ph1-1.png">
             </div>
 
             <div class="col-lg-4 blurb links">
                 <div>
-                    <img src="app/uploads/2017/03/bh_ph2.png" class="img-responsive">
+                    <img src="app/uploads/2017/04/bh_ph2-1.png" class="img-responsive">
                 </div>
                 <p>Learn how you can join us in making a difference … FOR THEM:</p>
                 <ul class="list-unstyled">

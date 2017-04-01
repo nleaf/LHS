@@ -26,7 +26,7 @@
         foreach( $recent_posts as $recent ){
             printf( '
               <li class="col-md-4">
-                <img src="'.get_the_post_thumbnail_url($recent["ID"]).'" class="img-responsive">
+                <img src="'.get_the_post_thumbnail_url($recent["ID"], 'recent-post').'" class="img-responsive">
                 <a href="%1$s">'.$recent["post_title"].'</a>
               </li>
               ',

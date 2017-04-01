@@ -47,7 +47,7 @@
 				$recent_posts = wp_get_recent_posts( $args );
 				foreach( $recent_posts as $recent ){
 					echo '<div class="col-lg-3 sup">
-			                <h3>Press Release</h3>
+			                <h3>News</h3>
 			                <h4>'.$recent["post_title"].'</h4>
 			                <p>'.get_the_excerpt($recent["ID"]).'</p>
 			                <a href="'.get_permalink($recent["ID"]).'" class="btn">Read More</a>
@@ -56,17 +56,21 @@
 				wp_reset_query();
 			?>
             <?php
-                $page_name = get_page_by_title( 'Foster' );
-                $page_title = get_page_by_title( 'Foster' )->post_title;
-                $page_excerpt = get_page_by_title( 'Foster' )->post_excerpt;
-                $page_content = get_page_by_title( 'Foster' )->post_content;
-
-                echo '<div class="col-lg-3 sup">
-                        <h3>Foster Information</h3>
-                        <p>'.$page_excerpt.'</p>
-                        <a href="'.get_permalink($page_name).'" class="btn">Read More</a>
-                    </div>';
-                wp_reset_query();
+                // Retrieve the next 5 upcoming events
+                $events = tribe_get_events( array(
+                    'posts_per_page' => 1,
+                ) );
+                 
+                // Loop through the events, displaying the title
+                // and content for each
+                foreach ( $events as $event ) {
+                    echo "<div class='col-lg-3 sup'>
+                        <h3>Events</h3>
+                        <h4>$event->post_title</h4>
+                        <p>$event->post_content</p>
+                        <a href='$event->guid' class='btn'>Read More</a>
+                        </div>";
+                }
             ?>
         </section>
     </div>

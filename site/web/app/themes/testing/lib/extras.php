@@ -4,6 +4,50 @@ namespace Roots\Sage\Extras;
 
 use Roots\Sage\Setup;
 
+
+function my_get_events_title($title) {
+    if( tribe_is_month() && !is_tax() ) { // The Main Calendar Page
+        return 'Events Calendar';
+    } elseif( tribe_is_month() && is_tax() ) { // Calendar Category Pages
+        return 'Events Calendar' . ' &raquo; ' . single_term_title('', false);
+    } elseif( tribe_is_event() && !tribe_is_day() && !is_single() ) { // The Main Events List
+        return 'Events List';
+    } elseif( tribe_is_event() && is_single() ) { // Single Events
+        return get_the_title();
+    } elseif( tribe_is_day() ) { // Single Event Days
+        return 'Events on: ' . date('F j, Y', strtotime($wp_query->query_vars['eventDate']));
+    } elseif( tribe_is_venue() ) { // Single Venues
+        return $title;
+    } else {
+        return $title;
+    }
+}
+add_filter('tribe_get_events_title', __NAMESPACE__ . '\\my_get_events_title');
+/**
+ * Add author names
+ */
+add_theme_support( 'post-thumbnails' );
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+    add_image_size( 'news-post', 434, 243, true ); // 300 pixels wide (and unlimited height)
+    add_image_size( 'blog-post', 239, 243, true ); // (cropped)
+    add_image_size( 'recent-post', 262, 163, true ); // (cropped)
+}
+/**
+ * Add author names
+ */
+function guest_author_name( $name ) {
+global $post;
+    $author = get_post_meta( $post->ID, 'guest-author', true );
+
+    if ( $author )
+    $name = $author;
+
+    return $name;
+}
+add_filter( 'the_author', __NAMESPACE__ . '\\guest_author_name' );
+add_filter( 'get_the_author_display_name', __NAMESPACE__ . '\\guest_author_name' );
+
 /**
  * Add <body> classes
  */

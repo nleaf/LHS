@@ -66,6 +66,9 @@ wp_nav_menu( array(
                                   <a href="/services/adoption/" role="button" aria-haspopup="true">Adoption</a>
                               </li>
                               <li>
+                                  <a href="/services/other-services/lost-found/" role="button" aria-haspopup="true">Lost and Found</a>
+                              </li>
+                              <li>
                                   <a href="/services/pet-surrender/" role="button" aria-haspopup="true">Pet Surrender</a>
                               </li>
                               <li>
@@ -74,19 +77,19 @@ wp_nav_menu( array(
                           </ul>
                       </div>
                       <div class="col-md-3 news">
-                          <h2><a href="/news-events/">News</a></h2>
+                          <h2><a href="/get-involved/">Get Involved</a></h2>
                           <ul class="">
                               <li>
-                                  <a href="/events/" role="button" aria-haspopup="true">Events Calendar</a>
+                                  <a href="/get-involved/volunteer/" role="button" aria-haspopup="true">Volunteer</a>
+                              </li>
+                              <li>
+                                  <a href="/get-involved/foster/" role="button" aria-haspopup="true">Foster</a>
+                              </li>
+                              <li>
+                                  <a href="/events/" role="button" aria-haspopup="true">Events</a>
                               </li>
                               <li>
                                   <a href="/news-events/host-an-event/" role="button" aria-haspopup="true">Host an Event</a>
-                              </li>
-                              <li>
-                                  <a href="/category/News/" role="button" aria-haspopup="true">News</a>
-                              </li>
-                              <li>
-                                  <a href="/category/blog/" role="button" aria-haspopup="true">Blog</a>
                               </li>
                           </ul>
                       </div>
@@ -94,16 +97,13 @@ wp_nav_menu( array(
                           <h2><a href="/donate/">Donate</a></h2>
                           <ul class="">
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Loyal Friends Monthly Giving</a>
+                                  <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=143&" role="button" aria-haspopup="true" target="_new">Loyal Friends Monthly Giving</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">One-Time Donation</a>
+                                  <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=157&" role="button" aria-haspopup="true" target="_new">One-Time Donation</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Honor and Memorial Donations</a>
-                              </li>
-                              <li>
-                                  <a href="#" role="button" aria-haspopup="true">Special Funds</a>
+                                  <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=137&" role="button" aria-haspopup="true" target="_new">Honor and Memorial Donations</a>
                               </li>
                               <li>
                                   <a href="/donate/donate-a-vehicle/" role="button" aria-haspopup="true">Donate a Vehicle</a>
@@ -132,13 +132,19 @@ wp_nav_menu( array(
                                   <a href="/about-us/measuring-our-progress/" role="button" aria-haspopup="true">Measuring our Progress</a>
                               </li>
                               <li>
+                                  <a href="/category/News/" role="button" aria-haspopup="true">News</a>
+                              </li>
+                              <li>
+                                  <a href="/category/blog/" role="button" aria-haspopup="true">Blog</a>
+                              </li>
+                              <li>
                                   <a href="/about-us/media-kit/" role="button" aria-haspopup="true">Media Kit</a>
                               </li>
                               <li>
                                   <a href="/about-us/employment-opportunities/" role="button" aria-haspopup="true">Employment Opportunities</a>
                               </li>
                               <li>
-                                  <a href="#" role="button" aria-haspopup="true">Directory?</a>
+                                  <a href="/about-us/contact-us/" role="button" aria-haspopup="true">Contact Us</a>
                               </li>
                           </ul>
                       </div>
@@ -171,16 +177,13 @@ wp_nav_menu( array(
                           </a>
                       </li>
                       <li>
-                          <a href="#" role="button" aria-haspopup="true">Loyal Friends Monthly Giving</a>
+                          <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=143&" role="button" aria-haspopup="true" target="_new">Loyal Friends Monthly Giving</a>
                       </li>
                       <li>
-                          <a href="#" role="button" aria-haspopup="true">One-Time Donation</a>
+                          <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=157&" role="button" aria-haspopup="true" target="_new">One-Time Donation</a>
                       </li>
                       <li>
-                          <a href="#" role="button" aria-haspopup="true">Honor and Memorial Donations</a>
-                      </li>
-                      <li>
-                          <a href="#" role="button" aria-haspopup="true">Special Funds</a>
+                          <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=137&" role="button" aria-haspopup="true" target="_new">Honor and Memorial Donations</a>
                       </li>
                       <li>
                           <a href="/donate/donate-a-vehicle/" role="button" aria-haspopup="true">Donate a Vehicle</a>
