@@ -14,11 +14,11 @@
     <footer>
       <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
     </footer>
-    <?php //comments_template('/templates/comments.php'); ?>
+    <?php comments_template('/templates/comments.php'); ?>
   </article>
 
   <h3 class="recent">Recent Posts</h3>
-    <ul class="list-inline recent">
+    <ul class="list-inline recent clearfix">
     <?php
         $args = array( 'numberposts' => '3' );
         $recent_posts = wp_get_recent_posts( $args );
