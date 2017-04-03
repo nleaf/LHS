@@ -37,6 +37,9 @@ wp_nav_menu( array(
                   <a href="/services/other-services/lost-found/" role="button" aria-haspopup="true">Lost & Found</a>
               </li>
               <li>
+                  <a href="/campaign/" role="button" aria-haspopup="true">Campaign</a>
+              </li>
+              <li>
                   <a href="/get-involved/" role="button" aria-haspopup="true">Get Involved</a>
               </li>
               <li>

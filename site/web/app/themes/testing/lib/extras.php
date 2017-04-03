@@ -4,6 +4,9 @@ namespace Roots\Sage\Extras;
 
 use Roots\Sage\Setup;
 
+define('TRIBE_MODIFY_GLOBAL_TITLE', true);
+define('TRIBE_DISABLE_TOOLBAR_ITEMS', true);
+define('TRIBE_HIDE_UPSELL', true);
 
 function my_get_events_title($title) {
     if( tribe_is_month() && !is_tax() ) { // The Main Calendar Page
@@ -23,6 +26,7 @@ function my_get_events_title($title) {
     }
 }
 add_filter('tribe_get_events_title', __NAMESPACE__ . '\\my_get_events_title');
+
 /**
  * Add author names
  */

@@ -71,7 +71,7 @@
             
             <div class="col-lg-4 blurb highlight">
                 <h2>
-                    <a href="#">
+                    <a href="/campaign/">
                     <span class="text">FOR THEM</span>
                       <!-- <span class="text">FOR</span><span class="text">THEM</span> -->
                     </a>
@@ -91,13 +91,13 @@
                 <p>Learn how you can join us in making a difference … FOR THEM:</p>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#">The Need <span class="arrow-right"></span></a>
+                        <a href="/campaign/the-need/">The Need <span class="arrow-right"></span></a>
                     </li>
                     <li>
-                        <a href="#">The New Shelter<span class="arrow-right"></span></a>
+                        <a href="/campaign/the-new-shelter/">The New Shelter<span class="arrow-right"></span></a>
                     </li>
                     <li>
-                        <a href="#">The Progress<span class="arrow-right"></span></a>
+                        <a href="/campaign/the-progress/">The Progress<span class="arrow-right"></span></a>
                     </li>
                     <li>
                         <a href="/donate">Donate<span class="arrow-right"></span></a>

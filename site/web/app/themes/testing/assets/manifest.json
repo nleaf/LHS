@@ -19,6 +19,9 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "instafeed.js": {
+      "bower": ["instafeed.js"]
     }
   },
   "config": {

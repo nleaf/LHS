@@ -103,6 +103,15 @@
 		padding-left: 35px;
 		font-size:1.33em;
 
+		.panel-group {
+			margin-top: 3.5rem;
+		    margin-bottom: 0;
+
+		    .panel-title {
+		    	margin-top:0px;
+		    }
+		}
+
 		h1, h2, h3, h4, h5, h6 {
 		    margin-top: 3.5rem;
 		    margin-bottom: 0;
