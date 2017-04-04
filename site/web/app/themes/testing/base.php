@@ -25,7 +25,7 @@ use Roots\Sage\Wrapper;
     <?php }else{ ?>
       <!-- Secondary Pages -->
       <!-- BreadCrumbs -->
-      <div class="container-fluid breadcrumbs">
+      <div class="container-fluid breadcrumbs hidden-xs">
           <div class="container">
               <div class="row">
                   <div class="col-lg-12">
@@ -37,7 +37,7 @@ use Roots\Sage\Wrapper;
 
       <!-- Sub-Header -->
       <!-- Sub-Header class needs to be populated with featured image as background! -->
-      <div class="container-fluid subHeader">
+      <div class="container-fluid subHeader hidden-xs">
           <div class="colorBar"></div>
           <div class="container">
               <div class="row">

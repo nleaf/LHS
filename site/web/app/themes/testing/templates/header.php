@@ -192,10 +192,10 @@ wp_nav_menu( array(
                           <a href="/donate/donate-a-vehicle/" role="button" aria-haspopup="true">Donate a Vehicle</a>
                       </li>
                       <li>
-                          <a href="/donate/wishlist/" role="button" aria-haspopup="true">Wishlist</a>
+                          <a href="/donate/other-ways-to-give/" role="button" aria-haspopup="true">Other ways to give</a>
                       </li>
                       <li>
-                          <a href="/donate/other-ways-to-give/" role="button" aria-haspopup="true">Other ways to give</a>
+                          <a href="/donate/wishlist/" role="button" aria-haspopup="true">Wishlist</a>
                       </li>
                   </ul>
               </li>
@@ -209,10 +209,16 @@ wp_nav_menu( array(
                           </a>
                       </li>
                       <li>
+                          <a href="/get-involved/volunteer/">Volunteer</a>
+                      </li>
+                      <li>
                           <a href="/get-involved/foster/">Foster</a>
                       </li>
                       <li>
-                          <a href="/get-involved/volunteer/">Volunteer</a>
+                          <a href="/events/">Events</a>
+                      </li>
+                      <li>
+                          <a href="/get-involved/host-an-event/">Host an Event</a>
                       </li>
                   </ul>
               </li>
@@ -233,10 +239,16 @@ wp_nav_menu( array(
                           </a>
                       </li>
                       <li>
-                          <a href="/events">Events</a>
+                          <a href="/services">Services</a>
                       </li>
                       <li>
                           <a href="/about-us">About Us</a>
+                      </li>
+                      <li>
+                          <a href="/category/blog/">Blog</a>
+                      </li>
+                      <li>
+                          <a href="/about-us/contact-us/">Contact Us</a>
                       </li>
                   </ul>
               </li>

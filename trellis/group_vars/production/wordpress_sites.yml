@@ -3,11 +3,11 @@
 # Define accompanying passwords/secrets in group_vars/production/vault.yml
 
 wordpress_sites:
-  lhs.nuleafs.com:
+  lawrencehumane.org:
     site_hosts:
-      - canonical: lhs.nuleafs.com
+      - canonical: lawrencehumane.org
         redirects:
-          - www.lhs.nuleafs.com
+          - www.lawrencehumane.org
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:nleaf/lhs.git # replace with your Git repo URL
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo

@@ -100,7 +100,7 @@
                         <a href="/campaign/the-progress/">The Progress<span class="arrow-right"></span></a>
                     </li>
                     <li>
-                        <a href="/donate">Donate<span class="arrow-right"></span></a>
+                        <a href="https://lhs.z2systems.com/np/clients/lhs/donation.jsp?campaign=126&">Donate<span class="arrow-right"></span></a>
                     </li>
                 </ul>
             </div>
@@ -189,7 +189,7 @@
 </div>
 
 <!-- Social -->
-<div class="container-fluid social hidden-xs" style="">
+<div class="container-fluid social" style="">
     <div class="container">
         <section class="row blurbs">
             <div class="col-lg-5 blurb highlight social">
