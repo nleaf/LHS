@@ -89,7 +89,7 @@ function display_sidebar() {
     is_single(),
     tribe_is_month(),
     is_category(),
-    is_page(array( 48,62 )),
+    is_page(array( 48)),
     is_page_template('template-custom.php'),
   ]);
 

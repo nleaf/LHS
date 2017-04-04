@@ -308,7 +308,7 @@
         <div class="col-lg-2 blurb">
             <ul class="list-unstyled">
                 <?php
-	                $parent = 76;
+	                $parent = 39;
 	                $args=array(
 	                  'title_li' => '',
 	                  'child_of' => $parent

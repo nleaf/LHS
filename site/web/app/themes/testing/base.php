@@ -103,12 +103,18 @@ use Roots\Sage\Wrapper;
                 <?php include Wrapper\sidebar_path(); ?>
               </aside><!-- /.sidebar -->
 
+              <?php if(is_page(array( 62))): ?>
+                <div class="col-lg-9 block" ng-view>
+                  <?php include Wrapper\template_path(); ?>
+                </div>
+              <?php else: ?>
                 <div class="col-lg-9 block">
                   <?php include Wrapper\template_path(); ?>
                 </div>
+              <?php endif; ?>
 
             <?php else : ?>
-              <?php if(is_page(array( 48,62))): ?>
+              <?php if(is_page(array( 48))): ?>
                 <!-- Check for Angular-->
                 <div class="col-lg-12" ng-view></div>
               <?php else: ?>

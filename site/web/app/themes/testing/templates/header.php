@@ -34,7 +34,7 @@ wp_nav_menu( array(
                   <a href="/services/adoption/adopt/" role="button" aria-haspopup="true">Adopt</a>
               </li>
               <li>
-                  <a href="/services/other-services/lost-found/" role="button" aria-haspopup="true">Lost & Found</a>
+                  <a href="/services/other-services/lost-or-found-a-pet/lost-found/" role="button" aria-haspopup="true">Lost & Found</a>
               </li>
               <li>
                   <a href="/campaign/" role="button" aria-haspopup="true">Campaign</a>
@@ -216,7 +216,7 @@ wp_nav_menu( array(
                       </li>
                   </ul>
               </li>
-              <li class="lostfound"><a href="/services/other-services/lost-found/">Lost & Found</a>
+              <li class="lostfound"><a href="/services/other-services/lost-or-found-a-pet/lost-found/">Lost & Found</a>
                   <!-- <ul class="dropdown-menu">
                       <li>
                           <a href="about.html">Stuff</a>
