@@ -103,7 +103,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
     };
 	
 	$scope.$on('$viewContentLoaded', function(event) {
-		$window.ga('send', 'pageview', { page: 'services/adoption/adopt'+$location.path(), title: ' Adoption Search | Animal Foundation' });
+		$window.ga('send', 'pageview', { page: 'services/adoption/adopt'+$location.path(), title: ' Adoption Search | Lawrence Humane' });
 		//console.log('gaq:' + $location.path());
 	 });
 
@@ -233,22 +233,22 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 
 	var urib = 'http://www.petharbor.com/results.asp?searchtype=ADOPT&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=8&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
 	var enUrl = encodeURIComponent(urib);
-	var uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl;
+	var uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl;
 
 	if(aSort) {
 		//console.log('aSort');
 	  urib = 'http://www.petharbor.com/results.asp?searchtype=ADOPT&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=8&imght=80&imgres=detail&tWidth=200&view=sysadm.v_'+aLocation+'&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor + '&NewOrderBy=' + aSort;
 	    enUrl = encodeURIComponent(urib);
-	    uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D' + aPage;
+	    uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D' + aPage;
 	}else if(aLocation) {
 	  // aLocation is defined
-	  uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D' + aPage;
+	  uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D' + aPage;
 	}else if ($scope.aInputId){
 		urib = 'http://www.petharbor.com/results.asp?searchtype=ID&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LAWR%27&atype=&nav=1&start=4&nomax=1&page=1&where=ID_'+$scope.aInputId;
 	    enUrl = encodeURIComponent(urib);
-	    uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl;
+	    uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl;
 	}else{
-		uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php';
+		uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php';
 	};
 	$http.get(uri).success (function(data){
 		$scope.pages = data[0];
@@ -267,7 +267,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 			//console.log(aniId);
 	    	urib = 'http://www.petharbor.com/results.asp?searchtype=ID&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&fontface=arial&fontsize=10&miles=20&lat=36.194168&lon=-115.22206&shelterlist=%27LAWR%27&atype=&nav=1&start=4&nomax=1&page=1&where=ID_'+aniId;
 		    enUrl = encodeURIComponent(urib);
-		    uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl;
+		    uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl;
 		    $location.path('/list/'+ aniId, false);
 		}else{
 			aType = $scope.selectedaType.value;
@@ -278,7 +278,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 	    	aLocation = $scope.selectedaLocation.value;
 	        urib = 'http://www.petharbor.com/results.asp?searchtype=ADOPT&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=8&imght=80&imgres=detail&tWidth=200&view=sysadm.v_' + aLocation + '&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=' + aType + ',' + aGender + ',' + aSize + ',' + aAge + ',' + aColor;
 		    enUrl = encodeURIComponent(urib);
-		    uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D';
+		    uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D';
 		    $location.path('/list/'+ aType +'/'+ aGender +'/'+ aSize +'/'+ aAge +'/'+ aColor +'/1/' + aLocation, false);
 		    animalService.setLocation(aLocation);
 		};
@@ -307,7 +307,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 			urib = 'http://www.petharbor.com/results.asp?searchtype=ADOPT&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=8&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0&NewOrderBy='+ aSort + '&PAGE=1';
 		};
 	    enUrl = encodeURIComponent(urib);
-	    uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl;
+	    uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl;
 
 	    $http.get(uri).success (function(data){
 			$scope.pages = data[0];
@@ -331,7 +331,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 			urib = 'http://www.petharbor.com/results.asp?searchtype=ADOPT&start=4&nopod=1&friends=1&samaritans=1&nosuccess=0&rows=8&imght=80&imgres=detail&tWidth=200&view=sysadm.v_lsvg_new&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=type_Dog,gender_0,size_0,age_0,color_0'+ '&NewOrderBy=' + aSort;
 		};
 	    enUrl = encodeURIComponent(urib);
-	    uri = 'http://lawrencehumane.dev/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D' + pagenum;
+	    uri = 'http://lawrencehumane.org/ngservice/example/example_adopt.php?l=' + enUrl + '%26PAGE%3D' + pagenum;
 
 	    $http.get(uri).success (function(data){
 			$scope.pages = data[0];
@@ -349,7 +349,7 @@ animalCtrl.controller('ListCtrlCustom', ['$scope', '$http', '$routeParams', '$lo
 }]);
 
 animalCtrl.controller('ListCtrl', ['$scope', '$http', '$routeParams','$location', function($scope, $http, $routeParams, $location) {
-  $http.get('http://lawrencehumane.dev/ngservice/example/example_adopt.php').success (function(data){
+  $http.get('http://lawrencehumane.org/ngservice/example/example_adopt.php').success (function(data){
     $scope.pages = data[0];
     $scope.animals = data[1];
   });
@@ -369,7 +369,7 @@ animalCtrl.controller('DetailCtrl', ['$scope', '$http', '$routeParams', 'animalS
 	var uri = 'http://www.petharbor.com/detail.asp?ID=' + whichId + '&LOCATION=LAWR&searchtype=ID&start=4&stylesheet=include/default.css&frontdoor=1&friends=1&samaritans=1&nosuccess=0&rows=24&imght=120&imgres=detail&tWidth=200&view=sysadm.v_animal&nomax=1&fontface=arial&fontsize=10&miles=20&shelterlist=%27LAWR%27&atype=&where=ID_' + whichId;
 	var enUrl = encodeURIComponent(uri);
 
-	$http.get('http://lawrencehumane.dev/ngservice/example/example_adopt.php?d='+ enUrl)
+	$http.get('http://lawrencehumane.org/ngservice/example/example_adopt.php?d='+ enUrl)
 		.success(function(data){
 			$scope.animals = data;
 			$scope.aContent = $scope.animals[0].debug;
@@ -380,12 +380,12 @@ animalCtrl.controller('DetailCtrl', ['$scope', '$http', '$routeParams', 'animalS
 			$scope.myModel = {
 				Text: "Adopt "+$scope.animals[0].name+" from @animalfndlv today! #AdoptLasVegas", // text for tweet and pinIt buttons
 				Name: "Adopt "+$scope.animals[0].name+" from @animalfndlv today! #AdoptLasVegas", // text for tweet and pinIt buttons
-				Url: "http://lawrencehumane.dev/services/adoption/adopt/details/"+$scope.animals[0].id,
+				Url: "http://lawrencehumane.org/services/adoption/adopt/details/"+$scope.animals[0].id,
 				Handle: "animalfndlv",
 				ImageUrl: $scope.animals[0].image // image url for pinIt button
 			};
 			
-			$window.ga('send', 'pageview', { page: 'services/adoption/adopt'+$location.path(), title: $scope.animals[0].name+' | Animal Foundation' });
+			$window.ga('send', 'pageview', { page: 'services/adoption/adopt'+$location.path(), title: $scope.animals[0].name+' | Lawrence Humane' });
 			
 			$scope.clickToOpen = function () {
 				ngDialog.open({ 

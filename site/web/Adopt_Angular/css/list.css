@@ -25,6 +25,7 @@
 min-height: 98px;
 position: relative;
 cursor: pointer;
+margin-bottom: 10px;
 -webkit-transition: all 0.4s; 
     -moz-transition: all 0.4s; 
     transition: all 0.4s;
@@ -170,15 +171,23 @@ width: 387px;
 }
 @media only screen and (max-width : 767px) {
 	.span2 { text-align:left; margin-bottom: 5px;}
+	.form-inline .form-horizontal .col-md-2 {
+		margin-bottom:10px;
+	}
+	.aniTout {
+		margin-bottom: 30px;
+	}
 	.formCtrl {
 		width: 65%;
-		margin: 0px 12px 0px 0px
+		height: 31px;
+		margin: 0px 0px 0px 0px;
+		padding: 0px;
 	}
 	input.formCtrl {
 		padding: 4px;
 		width: 63%;
 	}
-	.pagination { margin:5px 20px;}
+	.pagination { margin:0px 0px 20px 0px;}
 	.aniRow { margin-bottom:0px;}
 	.aniRow .span3 {
 		width: 288px;
