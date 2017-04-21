@@ -198,8 +198,9 @@
                     <span class="text">
                         <a href="https://twitter.com/lawrencehumane" alt="Twitter" target="_blank" class="icon twitter">Twitter</a>
                         <a href="https://www.facebook.com/lawrencehumane" alt="Facebook" target="_blank" class="icon facebook">Facebook</a>
-                        <a href="https://www.instagram.com/lawrencehumane" alt="Facebook" target="_blank" class="icon instagram">Instagram</a>
-                        <a href="https://www.youtube.com/user/LawrenceHumane" alt="Facebook" target="_blank" class="icon youtube">Youtube</a>
+                        <a href="https://www.instagram.com/lawrencehumane" alt="Instagram" target="_blank" class="icon instagram">Instagram</a>
+                        <a href="https://www.snapchat.com/add/lawrencehumane" alt="Snapchat" target="_blank" class="icon snap">Snapchat</a>
+                        <a href="https://www.linkedin.com/company/2314127" alt="LinkedIn" target="_blank" class="icon linkedin">LinkedIn</a>
                     </span>
                 </h2>
             </div>

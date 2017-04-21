@@ -1,9 +1,13 @@
+html, body {
+	overflow-x: hidden;
+}
 body {
     font-family: 'Open Sans', sans-serif;
 	overflow-x: hidden;
 	color: $primary-black;
 	text-rendering:  optimizeLegibility;
 }
+
 .container-fluid {
 	margin-left: 0px;
 	margin-right: 0px;
@@ -38,7 +42,7 @@ body {
 	.bar {
 		background: $primary-white;
 		height: 10vh;
-		width: 120%;
+		width: 90%;
 		position: absolute;
 		top: 0px;
 		transform: translateY(-5vh) translateX(-2px) rotate(2deg);
