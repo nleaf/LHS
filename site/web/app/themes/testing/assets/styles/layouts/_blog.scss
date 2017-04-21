@@ -9,7 +9,7 @@ body.category {
 		    padding: 6px;
 		    position: relative;
 		    margin-bottom: 3rem;
-
+		    min-height: 480px;
 		    &:hover {
 		    	border-color: $primary-purple;
 		    }
